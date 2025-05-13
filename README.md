@@ -1,4 +1,6 @@
 # React Bridge with different React versions
+This is a reproduction repository for showcasing [this issue](https://github.com/module-federation/core/issues/3771) using the
+Module Federation Bridge.
 
 ## Setup
 - Call `npm install` in `producer/react/react19` and `consumer/react/react18`
