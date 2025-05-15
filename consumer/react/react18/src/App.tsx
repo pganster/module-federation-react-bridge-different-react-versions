@@ -1,6 +1,7 @@
 import './App.css';
 import {React19ProducerButton} from "./React19ProducerButton.tsx";
 import React from 'react';
+import {React192ProducerButton} from "./React192ProducerButton.tsx";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <hr />
       </div>
       <React19ProducerButton/>
+      <React192ProducerButton />
     </div>
   );
 };

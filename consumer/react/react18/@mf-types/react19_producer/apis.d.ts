@@ -1,3 +1,1 @@
-
-    export type RemoteKeys = 'react19_producer/UiButton';
-    type PackageType<T> = T extends 'react19_producer/UiButton' ? typeof import('react19_producer/UiButton') :any;
+<!doctype html><html><head><title>Rsbuild App</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script defer src="http://localhost:5001/static/js/vendors-_module-federation_runtime_rspack_js_data_text_javascript_import___module_federation_-842235.js"></script><script defer src="http://localhost:5001/static/js/index.js"></script></head><body><div id="root"></div></body></html>

@@ -16,9 +16,13 @@ export default defineConfig({
       shareStrategy: 'loaded-first',
       shared: {
         react: {
+          singleton: true,
+          shareScope: 'react19',
           requiredVersion: dependencies['react'].version,
         },
         'react-dom': {
+          singleton: true,
+          shareScope: 'react19',
           requiredVersion: dependencies['react-dom'].version,
         }
       },
