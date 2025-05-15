@@ -1,34 +1,35 @@
-import { defineConfig } from '@rsbuild/core';
-import { pluginReact } from '@rsbuild/plugin-react';
+import {defineConfig} from '@rsbuild/core';
+import {pluginReact} from '@rsbuild/plugin-react';
 import {pluginModuleFederation} from "@module-federation/rsbuild-plugin";
+import { pluginSass } from '@rsbuild/plugin-sass';
 import { dependencies } from './package.json';
 
 export default defineConfig({
   plugins: [
+    pluginSass(),
     pluginReact({ splitChunks: { react: false } }),
     pluginModuleFederation({
-      name: 'react18_consumer',
-      remotes: {
-        react19_producer: 'react19_producer@http://localhost:5001/mf-manifest.json',
-        react19_2_producer: 'react19_2_producer@http://localhost:5002/mf-manifest.json',
+      name: 'react19_2_producer',
+      exposes: {
+        './UiButton': './src/export-uibutton',
       },
       shareStrategy: 'loaded-first',
       shared: {
         react: {
           singleton: true,
-          shareScope: 'react18',
+          shareScope: 'react19',
           requiredVersion: dependencies['react'].version,
         },
         'react-dom': {
           singleton: true,
-          shareScope: 'react18',
+          shareScope: 'react19',
           requiredVersion: dependencies['react-dom'].version,
         }
       },
     })
   ],
   server: {
-    port: 4001,
+    port: 5002,
     strictPort: true,
   },
 });
