@@ -2,6 +2,7 @@ import './App.css';
 import {React19ProducerButton} from "./React19ProducerButton.tsx";
 import React from 'react';
 import {React192ProducerButton} from "./React192ProducerButton.tsx";
+import {React18ProducerButton} from "./React18ProducerButton.tsx";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         Consumer React version: {React.version}
         <hr />
       </div>
+      <React18ProducerButton/>
       <React19ProducerButton/>
       <React192ProducerButton />
     </div>

@@ -3,9 +3,17 @@ This is a reproduction repository for showcasing [this issue](https://github.com
 Module Federation Bridge.
 
 ## Setup
-- Call `npm install` in `producer/react/react19` and `consumer/react/react18`
+- Call `npm install` in 
+  - `consumer/react/react18` 
+  - `producer/react/react18`
+  - `producer/react/react19`
+  - `producer/react/react19_2`
 
 ## Reproduction
-1. Call `npm run start` in `producer/react/react19` and `consumer/react/react18`
+1. Call `npm run start` in
+   - `consumer/react/react18`
+   - `producer/react/react18`
+   - `producer/react/react19`
+   - `producer/react/react19_2`
 2. Open `localhost:4001`
 3. See the error `Error loading remote component` instead of the actual component from the producer
