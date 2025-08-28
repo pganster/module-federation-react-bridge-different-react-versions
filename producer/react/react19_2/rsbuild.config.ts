@@ -14,6 +14,7 @@ export default defineConfig({
         './UiButton': './src/export-uibutton',
       },
       shareStrategy: 'loaded-first',
+      shareScope: 'react19',
       shared: {
         react: {
           singleton: true,
