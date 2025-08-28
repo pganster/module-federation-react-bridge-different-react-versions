@@ -16,4 +16,4 @@ Module Federation Bridge.
    - `producer/react/react19`
    - `producer/react/react19_2`
 2. Open `localhost:4001`
-3. See the error `Error loading remote component` instead of the actual component from the producer
+3. See the error `Error loading remote component` for both React 19 apps

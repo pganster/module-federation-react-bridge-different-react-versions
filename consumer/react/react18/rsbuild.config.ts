@@ -14,6 +14,7 @@ export default defineConfig({
         react19_2_producer: 'react19_2_producer@http://localhost:5002/mf-manifest.json',
       },
       shareStrategy: 'loaded-first',
+      shareScope: 'react18',
       shared: {
         react: {
           singleton: true,
