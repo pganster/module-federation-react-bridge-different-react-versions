@@ -19,11 +19,13 @@ export default defineConfig({
         react: {
           singleton: true,
           shareScope: 'react18',
+          strictVersion: true,
           requiredVersion: dependencies['react'].version,
         },
         'react-dom': {
           singleton: true,
           shareScope: 'react18',
+          strictVersion: true,
           requiredVersion: dependencies['react-dom'].version,
         }
       },
