@@ -9,9 +9,18 @@ export default defineConfig({
     pluginModuleFederation({
       name: 'react18_consumer',
       remotes: {
-        react18_producer: 'react18_producer@http://localhost:5003/mf-manifest.json',
-        react19_producer: 'react19_producer@http://localhost:5001/mf-manifest.json',
-        react19_2_producer: 'react19_2_producer@http://localhost:5002/mf-manifest.json',
+        react18_producer: {
+          external: 'react18_producer@http://localhost:5003/mf-manifest.json',
+          shareScope: 'react18'
+        },
+        react19_producer: {
+          external: 'react19_producer@http://localhost:5001/mf-manifest.json',
+          shareScope: 'react19'
+        },
+        react19_2_producer: {
+          external: 'react19_2_producer@http://localhost:5002/mf-manifest.json',
+          shareScope: 'react19'
+        },
       },
       shareStrategy: 'loaded-first',
       shareScope: 'react18',
