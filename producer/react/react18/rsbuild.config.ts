@@ -19,12 +19,12 @@ export default defineConfig({
         react: {
           singleton: true,
           strictVersion: true,
-          requiredVersion: dependencies['react'].version,
+          requiredVersion: dependencies['react'],
         },
         'react-dom': {
           singleton: true,
           strictVersion: true,
-          requiredVersion: dependencies['react-dom'].version,
+          requiredVersion: dependencies['react-dom'],
         }
       },
     })

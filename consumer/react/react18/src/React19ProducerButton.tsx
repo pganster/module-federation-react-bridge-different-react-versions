@@ -1,4 +1,4 @@
-import { createRemoteComponent } from '@module-federation/bridge-react';
+import { createRemoteAppComponent } from '@module-federation/bridge-react';
 import { loadRemote } from '@module-federation/runtime';
 
 const FallbackErrorComp = ({ error }: { error: Error }) => {
@@ -15,7 +15,7 @@ const FallbackErrorComp = ({ error }: { error: Error }) => {
 
 const FallbackComp = <div data-test-id="loading">loading...</div>;
 
-const UiButton = createRemoteComponent({
+const UiButton = createRemoteAppComponent({
   loader: () => loadRemote('react19_producer/UiButton'),
   fallback: FallbackErrorComp,
   loading: FallbackComp,
